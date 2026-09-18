@@ -4,7 +4,10 @@ from flask import Flask, render_template, request, jsonify
 from ai_engine import analyze_with_ai
 
 app = Flask(__name__)
-DB = os.getenv("DB_PATH", "ghostmate.db")
+if os.getenv("VERCEL"):
+    DB = "/tmp/ghostmate.db"
+else:
+    DB = os.getenv("DB_PATH", "ghostmate.db")
 
 CREATOR = {
     "name": "Alex Creator",
