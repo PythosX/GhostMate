@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GhostMate V2</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app">
+<aside>
+  <div class="logo"><b>G</b><div><strong>GhostMate</strong><small>Autonomous DM Assistant</small></div></div>
+  <nav><button class="active">⌂ Dashboard</button><button>✉ Inbox</button><button>◈ Memory</button><button>◒ Analytics</button><button>⚙ Settings</button></nav>
+  <div class="profile"><div class="avatar">AC</div><div><b>{{creator.name}}</b><small>AI automation active</small></div><i></i></div>
+</aside>
+<main>
+<header>
+  <div><label>LIVE AI INBOX</label><h1>GhostMate V2</h1><p>AI reads conversations, replies automatically, and interrupts you only when attention is needed.</p></div>
+  <span class="online">● AI ONLINE</span>
+</header>
+<section class="stats">
+  <div><small>Incoming</small><b id="sMessages">0</b><em>messages</em></div>
+  <div><small>AI Replies</small><b id="sReplies">0</b><em>automatic</em></div>
+  <div class="danger"><small>Escalations</small><b id="sEscalations">0</b><em>needs attention</em></div>
+  <div><small>Mode</small><b>Auto</b><em>human only for important</em></div>
+</section>
+<section class="grid">
+  <div class="panel inbox">
+    <div class="head"><div><label>CONVERSATIONS</label><h2>Live Inbox</h2></div><button onclick="loadConversations()">↻</button></div>
+    <div id="conversationList"></div>
+  </div>
+  <div class="panel chat">
+    <div class="head"><div><label>CONVERSATION</label><h2 id="chatName">Select a conversation</h2></div><span id="chatStatus">—</span></div>
+    <div id="messages" class="messages"><div class="placeholder">Choose a conversation from the left.</div></div>
+    <div class="simulate">
+      <label>SIMULATE INCOMING DM</label>
+      <div class="sendrow"><input id="sender" placeholder="Sender name" value="Demo User"><input id="dm" placeholder="Type an incoming message..."><button onclick="sendDM()">Send to GhostMate</button></div>
+      <div class="examples"><button onclick="example('What camera do you use?')">FAQ</button><button onclick="example('We want to offer you ₹200000 for a sponsorship next month.')">Business</button><button onclick="example('Can we discuss something important?')">Complicated</button></div>
+    </div>
+  </div>
+  <div class="panel brain">
+    <div class="head"><div><label>AI ACTIVITY</label><h2>Decision Center</h2></div><span id="decisionBadge">WAITING</span></div>
+    <div id="decision"><div class="placeholder">GhostMate will show the latest AI decision here.</div></div>
+  </div>
+</section>
+</main></div>
+<script src="/static/app.js"></script>
+</body></html>
