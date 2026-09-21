@@ -1,5 +1,7 @@
 # 👻 GhostMate — AI DM Assistant for Content Creators
 
+# https://ghostmatev2.vercel.app
+
 > **Autonomous FAQ automation paired with intelligent human escalation for content creators and public figures.**
 
 GhostMate is an AI-powered DM assistant designed to help creators manage incoming messages more efficiently. Instead of treating every DM as a simple chatbot interaction, GhostMate uses AI reasoning, memory retrieval, and escalation logic to decide how each message should be handled.
